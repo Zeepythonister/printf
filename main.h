@@ -39,7 +39,7 @@ int print_rot(va_list arguments, char *buf, unsigned int ibuf);
 int printLongInt(va_list arguments, char *buf, unsigned int ibuf);
 int printLongUnt(va_list arguments, char *buf, unsigned int ibuf);
 int printLongOct(va_list arguments, char *buf, unsigned int ibuf);
-int prinlhex(va_list arguments, char *buf, unsigned int ibuf);
+int printLongHexa(va_list arguments, char *buf, unsigned int ibuf);
 int prinlupx(va_list arguments, char *buf, unsigned int ibuf);
 int prinhint(va_list arguments, char *buf, unsigned int ibuf);
 int prinhunt(va_list arguments, char *buf, unsigned int ibuf);
