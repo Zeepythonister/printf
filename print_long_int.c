@@ -1,14 +1,12 @@
 #include "main.h"
 /**
- * printLongInt - prints a long integer
+ * prinlint - prints a long integer
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
- *
- * Description: The function printLongInt outputs a long integer to the stdout
  * Return: number of chars printed.
  */
-int printLongInt(va_list arguments, char *buf, unsigned int ibuf)
+int prinlint(va_list arguments, char *buf, unsigned int ibuf)
 {
 	long int int_input;
 	unsigned long int int_in, int_temp, i, div, isneg;

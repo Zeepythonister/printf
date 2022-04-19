@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * printLongOct - prints long decimal number in octal
+ * prinloct - prints long decimal number in octal
  * @arguments: input number
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed.
  */
-int printLongOct(va_list arguments, char *buf, unsigned int ibuf)
+int prinloct(va_list arguments, char *buf, unsigned int ibuf)
 {
 	long int int_input, i, isnegative, count, first_digit;
 	char *octal, *binary;
@@ -40,4 +40,5 @@ int printLongOct(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	free(binary);
 	free(octal);
+	return (count);
 }
