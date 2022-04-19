@@ -105,7 +105,11 @@ The character \fI%\fR is followed by zero the following flags:
 .R To print the the string \fBHello Alx!\fR and its length in decimal.
 
 #include ''main.h''
-
+/**
+ * main - Entry point
+ * Description: main function prints out str to the stdout
+ * Return: 0 always on success
+*/
 int main(void)
 
 {
