@@ -1,4 +1,4 @@
-#include "main.h"
+#include <main.h>
 
 /**
  * print_binary - Converts a number from base 10 to binary
@@ -11,7 +11,6 @@ int print_binary(va_list list, param_func *func)
 	unsigned int binary_num;
 	char *str;
 	int len = 0;
-
 	binary_num = va_arg(list, unsigned int);
 	str = convert_num(binary_num, 2, FLAG_UNSIGNED, func);
 	if (func->hash_flag && binary_num)
