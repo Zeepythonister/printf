@@ -1,67 +1,70 @@
-_printf
-_printf is a custom implementation of the C programming function printf.
+# _printf
 
-Prototype: int _printf(const char *, ...);
+_printf is a simple custom printf function that formats and prints data to the standard output.
 
-Examples
-String
+# Description
+_printf() functiion formats and prints data to the standard output according to the format specified.
 
-Input: _printf("%s\n", 'This is a string.');
-Output: This is a string.
-Character
+The function has the following conversion specifies:
 
-Input: _printf("The first letter in the alphabet is %c\n", 'A');
-Output: The first letter in the alphabet is A
-Integer
++ %c - prints a character
++ %d - prints a  integer
++ %s - prints a string
++ %i - prints an integer
++ % - prints percentage;
++ %b - print binary numbers
++ %u - print unsigned integers of type int
++ %x - print hexadecimal numbers in lowercase
++ %X - print hexadecimal numbers in uppercase
++ %o - print octal numbers
++ %r - prints string in reverse order 
++ %R - prints string in ROT13 encoding
++ %p - print pointer addresses
++ ' ' - print a space
++ # -  modifier for unsigned conversion
 
-Input: _printf("There are %i dozens in a gross\n", 12);
-Output: There are 12 dozens in a gross
-Decimal:
 
-Input: _printf("%d\n", 1000);
-Output: 1000
-Project Requirements
+```bash 
+git clone https://github.com/zeepythonister/printf.git
+```
 
-Programs and functions will be compiled with gcc 4.8.4 using flags -Wall -Werror -Wextra and -pedantic
-Code must follow the Betty style
-Global variables are not allowed
-Authorized functions and macros:
-write (man 2 write)
-malloc (man 3 malloc)
-free (man 3 free)
-va_start (man 3 va_start)
-va_end (man 3 va_end)
-va_copy (man 3 va_copy)
-va_arg (man 3 va_arg)
-Mandatory Tasks
- Write function that produces output with conversion specifiers c, s, and %.
- Handle conversion specifiers d, i.
- Create a man page for your function.
-Advanced Tasks
- Handle conversion specifier b.
- Handle conversion specifiers u, o, x, X.
- Use a local buffer of 1024 chars in order to call write as little as possible.
- Handle conversion specifier S.
- Handle conversion specifier p.
- Handle flag characters +, space, and # for non-custom conversion specifiers.
- Handle length modifiers l and h for non-custom conversion specifiers.
- Handle the field width for non-custom conversion specifiers.
- Handle the precision for non-custom conversion specifiers.
- Handle the 0 flag character for non-custom conversion specifiers.
- Handle the custom conversion specifier r that prints the reversed string.
- Handle the custom conversion specifier R that prints the rot13'ed string.
- All above options should work well together.
-File Descriptions
-_printf.c: - contains the fucntion _printf, which uses the prototype int _printf(const char *format, ...);. The format string is composed of zero or more directives. See man 3 printf for more detail. _printf will return the number of characters printed (excluding the null byte used to end output to strings) and will write output to stdout, the standard output stream.
-_putchar.c: - contains the function _putchar, which writes a character to stdout.
-holberton.h: - contains all function prototypes used for _printf.
-man_3_printf: - manual page for the custom _printf function.
-print_chars.c: - contains the functions print_c, print_s, print_S, and print_r which handle the conversion specifiers c, s, S, and r, respectively, as well as hex_print, which prints a char's ascii value in uppercase hex
-print_numbers.c: - contains the functions print_i and print_d, which handle the conversion specifiers i and d, respectively
-print_hex.c: - contains the functions print_hex, which prints an unsigned int in hexidecimal form, print_x, print_X, and print_p, which handle the conversion specifiers x, X, and p, respectively
-print_unsigned_int.c: - contains the functions print_u, print_o, and print_b, which handle the conversion specifiers u, o, and b, respectively
-print_rot13.c - contains the function print_R, which handles the conversion specifier R
+# Adding man_3_prinf to you mandb
 
-Honours by:
-Zainab Abdulkareem(Zeepythonister)
-Ridwan ODUNOLA(eXochus)
+To add the man_3_prinf page to your mandb run this script
+
+```bash
+sudo ./install
+```
+
+# Usage
++ include the `main.h ` header file on the function for using _printf().
++ All the files are to be compiled on Ubuntu 1TS
+```bash
+Compile your code with `gcc -Wall -Werror -Wextra -pedantic *.c`
+```
+
+```c
+#include <stdio.h>
+#include "main.h"
+
+int main(void)
+{
+    int i = 10;
+    int print;
+    char *s = "printf by Zee & eXochus";
+    _printf("%d %s %c\n", i, s, 'c');
+     print =  _printf("%d", s); /* get number of characters */
+     printf("%d\n", print); /* print number of characters */
+    return 0;
+}
+
+
+```
+
+# Copyright
+Copyright (c) 2022 Zainab Abdulkareem & Ridwan ODUNOLA
+
+
+
+
+
